@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<html>
+   <head>
+  	<title>Contact Us</title>
+	<meta charset="UTF-8">
+  	<link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+  	<script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+   </head>
+
+   <body style="margin-top: 100px;">
+    <div class="bg" style="width: 700px; margin-left: 23%;">
+        <h1 style="font-family: Poppins, sans-serif; text-align: center;">🔍You can find us here at Fin & Chips:</h1>
+    </div>
+	<div id="container" style="margin-left: 20%;">
+	<div style="font-family: Poppins, sans-serif; margin-top: 20px; display: inline-block;">
+		<span style="font-weight: 600;">Corporate Address:</span><br>
+		Sector-8, Park Street,<br>
+		Dombivli-421201<br>
+		<br>
+		<span style="font-weight: 600;">Connect with the developers on:</span><br>
+		📷<a href="https://www.instagram.com/tha.nush.ree/">Instagram</a><br>
+		📥<a href="https://www.linkedin.com/in/rini-pillai-3536a6222/">LinkedIn</a><br>
+		🖥️<a href="https://github.com/saumyanair06">GitHub</a><br>
+	</div>
+  	<div id = "map" style = "width: 500px; height: 200px; margin-left: 20px; display: inline-block;" ></div>
+	</div>
+  	<script>
+     	var mapOptions = {
+        	center: [19.214783849325368, 73.08483655166104],
+        	zoom: 12
+     	}
+     	var map = new L.map('map', mapOptions);
+     	var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+     	map.addLayer(layer);
+     	var marker = L.marker([19.214783849325368, 73.08483655166104]);
+     	marker.addTo(map);
+  	</script>
+   </body>
+   
+</html>
